@@ -1,0 +1,15 @@
+/* darkModeToggle.css */
+.darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+
+    .header {
+        color: white;
+    }
+}

@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    color: blue;
+    font-size: 0.8rem;
+}
+
+.title {
+    font-size: 1rem;
+
+}
+
+.buttonContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.paginationContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.01);
+    background-color: rgb(242, 240, 240);
+    cursor: pointer;
+}

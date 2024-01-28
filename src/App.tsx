@@ -1,17 +1,18 @@
 import "./App.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import UserList from "./pages/user-list";
-import UserInfo from "./pages/user-info";
+import Story from "./pages/trial";
+
+import Comments from "./pages/comments";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <UserList />,
+    element: <Story />,
   },
   {
-    path: "/:userId",
-    element: <UserInfo />,
+    path: "/comments/:storyId",
+    element: <Comments />,
   },
 ]);
 
