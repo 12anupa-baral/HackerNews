@@ -12,7 +12,7 @@ interface Story {
   id: number;
   title: string;
   url: string;
-  author: string; // Add the author property
+  author: string;
   descendants: number;
 }
 
@@ -21,7 +21,7 @@ const Story: React.FC<StoryProps> = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [loading, setLoading] = useState<boolean>(true);
   const storiesPerPage: number = 10;
-  const [selectedStoryId, setSelectedStoryId] = useState<number | null>(null);
+  const [_selectedStoryId, setSelectedStoryId] = useState<number | null>(null);
 
   useEffect(() => {
     const fetchTopStories = async () => {
@@ -40,12 +40,12 @@ const Story: React.FC<StoryProps> = () => {
               `https://hacker-news.firebaseio.com/v0/item/${storyId}.json`
             );
             const storyData: Story = await storyResponse.json();
-            // Fetch the author information separately
+
             const authorResponse = await fetch(
               `https://hacker-news.firebaseio.com/v0/user/${storyData.by}.json`
             );
             const authorData = await authorResponse.json();
-            storyData.author = authorData.id; // Assuming 'id' is the author's username
+            storyData.author = authorData.id;
             return storyData;
           })
         );

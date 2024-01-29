@@ -1,7 +1,6 @@
-// Comments.tsx
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Button, Card, CardContent, Typography } from "@mui/material";
+import { Card, CardContent, Typography } from "@mui/material";
 import CommentItem from "./commentItem";
 import "../pages/styles/comments.css";
 
@@ -19,7 +18,7 @@ interface StoryDetails {
 
 function decodeHtmlEntities(text: string | undefined): string {
   return text
-    ? text.replace(/&#(\d+);/g, (match, dec) => String.fromCharCode(dec))
+    ? text.replace(/&#(\d+);/g, (_match, dec) => String.fromCharCode(dec))
     : "";
 }
 

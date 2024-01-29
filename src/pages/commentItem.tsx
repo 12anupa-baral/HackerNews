@@ -1,4 +1,3 @@
-// CommentItem.tsx
 import React, { useState, useEffect } from "react";
 import { Button, Card, CardContent, Typography } from "@mui/material";
 
