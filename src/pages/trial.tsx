@@ -14,6 +14,7 @@ interface Story {
   url: string;
   author: string;
   descendants: number;
+  by: string;
 }
 
 const Story: React.FC<StoryProps> = () => {
