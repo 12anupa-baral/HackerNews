@@ -5,16 +5,21 @@ import Story from "./pages/trial";
 
 import Comments from "./pages/comments";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Story />,
+    },
+    {
+      path: "/comments/:storyId",
+      element: <Comments />,
+    },
+  ],
   {
-    path: "/",
-    element: <Story />,
+    basename: "/HackerNews",
   },
-  {
-    path: "/comments/:storyId",
-    element: <Comments />,
-  },
-]);
+);
 
 function App() {
   return (
